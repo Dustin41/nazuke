@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
   <body>
     <header>
@@ -88,20 +89,5 @@
     <footer>
     </footer>
     <script src="main.js"></script>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      jQuery(document).ready(function($){
-        $(function(){
-          $('a[href^=#]').click(function(){
-              const speed = 500;
-              const href= $(this).attr("href");
-              const target = $(href == "#" || href == "" ? 'html' : href);
-              const position = target.offset().top;
-              $("html, body").animate({scrollTop:position}, speed, "swing");
-              return false;
-          });
-        });
-      });
-    </script>
   </body>
 </html>

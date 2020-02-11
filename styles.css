@@ -62,6 +62,7 @@ header p {
 
 .btn:active {
   transform: translateY(4px);
+  -webkit-transform: translateY(4px);
   border-bottom: none;
 }
 
@@ -71,7 +72,7 @@ header p {
   justify-content: center;
 }
 
-.methods > li {
+.methods > a {
   margin: 0 0.7vw;
 }
 

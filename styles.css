@@ -170,22 +170,22 @@ input {
 
 @media screen and (min-width: 640px)  {
   body {
-    font-size: 1.85rem;
+    font-size: 1.7rem;
   }
 
   header h1 {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 
   header p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
 
 @media screen and (min-width: 1200px) {
   body {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   header {
@@ -193,11 +193,11 @@ input {
   }
 
   header h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   header p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .discription {

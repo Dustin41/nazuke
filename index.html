@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Nazuke</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <h1>Ｎａｚｕｋｅ</h1>
+        <p>ナヅケ</p>
+      </div>
+    </header>
+    <div class="main">
+      <div class="discription">
+        <p>あなたのブログ名を、３つの方法で提案します。</p>
+        <ul class="methods">
+            <li><a class="btn" href="#M1">組み合わせ</a></li>
+            <li><a class="btn" href="#M2">アナグラム</a></li>
+            <li><a class="btn" href="#M3">&nbsp;ランダム&nbsp;</a></li>
+        </ul>
+      </div>
+      <div class="bigMethods">
+        <section class="bigMethod" id="M1">
+          <h2>組み合わせ</h2>
+          <p class="under">入力された言葉に、それっぽい言葉を組み合わせます。</p>
+          <p>例：「ブログ」を入力し、【ひらがな】を選択<br>↓<br>「ブログせんせい」や「ふんわりブログ」が生成されます</p>
+        <form autocomplete="off">
+          <div id="areaA"><input type="text" name="combiName" placeholder="ここへ入力" maxlength="15"></div>
+          <div>
+            <input type="radio" name="lang1" value="hira" checked id="hira1"><label for="hira1">ひらがな</label>
+            <input type="radio" name="lang1" value="kata" id="kata1"><label for="kata1">カタカナ</label>
+            <input type="radio" name="lang1" value="alf" id="alf1"><label for="alf1">英語</label>
+          </div>
+          <input class="btn" type="button" value="  作ってみる（10個）" id="combiBtn">
+        </form>
+
+      </section>
+        <section class="bigMethod" id="M2">
+          <h2>アナグラム</h2>
+          <p class="under">入力された言葉を、並び替えます。</p>
+          <p>例：「ダウンロード」を入力<br>↓<br>「ドロダンーウ」や「ウードダンロ」が生成されます。</P>
+          <p>※ 英語・漢字・ひらがな OK</p>
+          <form autocomplete="off">
+            <div id="areaB"><input type="text" name="anaName" placeholder="ここへ入力"></div>
+            <input type="button" class="btn" value="  作ってみる（10個）" id="anaBtn">
+          </form>
+        </section>
+        <section class="bigMethod" id="M3">
+          <h2>ランダム</h2>
+          <p class="under">指定された文字数で、ランダムに言葉を作ります。</p>
+          <p>例：【5】・【カタカナ】を選択<br>↓<br>「ドイレツミ」や「ポウヒヒア」が生成されます。</p>
+          <form>
+            <div>文字数： <select name="ranName">
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5" selected>5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select></div>
+            <div>
+              <input type="radio" name="lang2" value="hira" id="hira2" checked><label for="hira2">ひらがな</label>
+              <input type="radio" name="lang2" value="kata" id="kata2"><label for="kata2">カタカナ</label>
+              <input type="radio" name="lang2" value="alf" id="alf2"><label for="alf2">英語</label>
+            </div>
+            <input class="btn" type="button" value="  作ってみる（10個）" id="ranBtn">
+          </form>
+        </section>
+      </div>
+      <div id="modal" class="hidden">
+        <section>
+          <ul id="resultArea">
+          </ul>
+        </section>
+        <div class="btn" id="remake">同じ条件でもう１回つくる</div>
+        <div class="btn" id="back">戻る</div>
+      </div>
+      <div id="mask" class="hidden"></div>
+    </div>
+    <footer>
+    </footer>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('a[href^=#]').click(function(){
+            const speed = 500;
+            const href= $(this).attr("href");
+            const target = $(href == "#" || href == "" ? 'html' : href);
+            const position = target.offset().top;
+            $("html, body").animate({scrollTop:position}, speed, "swing");
+            return false;
+        });
+      });
+    </script>
+  </body>
+</html>

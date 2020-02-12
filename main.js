@@ -262,10 +262,8 @@
   });
 
   //ウィンドウ外をクリックで戻る
-  window.addEventListener('click', (e) => {
-    if (e.target == mask) {
+  mask.addEventListener('click', () => {
       modalClose();
-    }
   });
 
   //何も入力されていない時のエラー

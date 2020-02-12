@@ -1,8 +1,9 @@
 'use strict'
 {
+  //スマホならタップ、pcならクリック
+  const mytap = window.ontouchstart===null?"touchstart":"click";
 
-  //どの処理をしているか
-  // 組み合わせ:a  アナグラム:b  ランダム:c
+  //どの処理をしているか（組み合わせ:a  アナグラム:b  ランダム:c）
   let playLabel;
 
 
@@ -43,7 +44,7 @@
 
   // import {frontHira,backHira,frontKata,backKata,frontAlf,backAlf} from './data.js';
   const combiBtn = document.getElementById('combiBtn');
-  combiBtn.addEventListener('click', () => {
+  combiBtn.addEventListener(mytap, () => {
     const combiName = sanitize(document.querySelector('input[name="combiName"]').value);
     strCheck(combiName, areaA, "areaA", 'input[name="combiName"]');
     if (errorLabel) {
@@ -103,7 +104,7 @@
 
   //*****アナグラム*******************
   const anaBtn = document.getElementById('anaBtn');
-  anaBtn.addEventListener('click', () => {
+  anaBtn.addEventListener(mytap, () => {
     const ana = sanitize(document.querySelector('input[name="anaName"]').value);
     strCheck(ana, areaB, "areaB", 'input[name="anaName"]');
     if (errorLabel) {
@@ -143,7 +144,7 @@
   const alf = 'abcdefghijklmnopqrstuvwxyz';
 
   const ranBtn = document.getElementById('ranBtn');
-  ranBtn.addEventListener('click', () => {
+  ranBtn.addEventListener(mytap, () => {
     random();
   });
 
@@ -234,7 +235,7 @@
 
   //もう一度つくる
   const remake = document.getElementById('remake');
-  remake.addEventListener('click', () => {
+  remake.addEventListener(mytap, () => {
     remakeResult();
   });
 
@@ -257,12 +258,11 @@
 
   //戻る
   const back = document.getElementById('back');
-  back.addEventListener('click', () => {
+  back.addEventListener(mytap, () => {
     modalClose();
   });
 
   //ウィンドウ外をクリックで戻る
-  const mytap = window.ontouchstart===null?"touchstart":"click";
   mask.addEventListener(mytap, function(){ modalClose() }, false);
 
   //何も入力されていない時のエラー
@@ -294,6 +294,7 @@
       .replace(/>/g,"&gt;");
   }
 
+  //スムーススクロール
   $(function(){
     $('a[href^=#]').click(function(){
         const speed = 500;

@@ -262,9 +262,8 @@
   });
 
   //ウィンドウ外をクリックで戻る
-  mask.addEventListener('click', () => {
-      modalClose();
-  });
+  const mytap = window.ontouchstart===null?"touchstart":"click";
+  mask.addEventListener(mytap, function(){ modalClose() }, false);
 
   //何も入力されていない時のエラー
   let errorLabel;

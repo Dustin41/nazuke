@@ -261,6 +261,7 @@
   });
 
   function remakeResult () {
+    alert('lllllll');
     if (window.ontouchstart == null) {
       switch (playLabel) {
         case 'a':

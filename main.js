@@ -334,5 +334,17 @@
         return false;
     });
   });
+  
+  //ダブルタップズーム禁止
+  let t = 0;
+  document.documentElement.addEventListener('touchend', function (e) {
+  let now = new Date().getTime();
+  if ((now - t) < 350){
+    e.preventDefault();
+  }
+  t = now;
+  }, false);
+  
+</script>
 
 }

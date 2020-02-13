@@ -337,7 +337,7 @@
 
   //スムーススクロール
   $(function(){
-    $('a[href^=#]').click(function(){
+    $('a[href^=#]').touchstart(function(){
         const speed = 500;
         const href= $(this).attr("href");
         const target = $(href == "#" || href == "" ? 'html' : href);

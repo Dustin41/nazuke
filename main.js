@@ -272,8 +272,8 @@
     if (window.ontouchstart === null) {
       switch (playLabel) {
         case 'a':
-          alert('oo5555oo');
-          combiBtn.onclick();
+          alert('oo5522255oo');
+          combiBtn.onclick;
           alert('gggg');
           break;
         case 'b':

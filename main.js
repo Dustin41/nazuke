@@ -1,5 +1,8 @@
 'use strict'
 {
+  
+  alert('miss');
+  
   //スマホならタップ、pcならクリック
   const mytap = window.ontouchstart===null?"touchstart":"click";
 

@@ -31,7 +31,7 @@
   const backAlf = [
     'log','antenna','strike','poket','binx','mobile','out','net','com','journal','commerce','books','monster','academy','smash','print','club','bank','nine','store','check','change','flat','zero','cut','pro','door','reach','channel','town','picks','spiral','macine','earth','city','teil','tube','gram','tv','note','tell','lock','tunar','walk','bang','mee','park','zon','camera','flyer'
   ];
-
+}
   export {frontHira,backHira,frontKata,backKata,frontAlf,backAlf};
 
-}
+

@@ -63,6 +63,10 @@
   //組み合わせボタン
   const combiBtn = document.getElementById('combiBtn');
   combiBtn.addEventListener(mytap, () => {
+    combiBtn();
+  });
+
+  function combiBtn() {
     const combiName = sanitize(document.querySelector('input[name="combiName"]').value);
     strCheck(combiName, areaA, "areaA", 'input[name="combiName"]');
     if (errorLabel) {
@@ -70,7 +74,7 @@
     }
     combi();
     modalOpen();
-  });
+  }
 
   //combi関数
   function combi() {
@@ -125,6 +129,10 @@
   //アナグラムボタン
   const anaBtn = document.getElementById('anaBtn');
   anaBtn.addEventListener(mytap, () => {
+    anaBtn(); 
+  });
+
+  function anaBtn() {
     const ana = sanitize(document.querySelector('input[name="anaName"]').value);
     strCheck(ana, areaB, "areaB", 'input[name="anaName"]');
     if (errorLabel) {
@@ -143,8 +151,8 @@
     }
     playLabel = 'b';
     modalOpen();
-  });
-
+  }
+  
   //シャッフル関数
   function shuffle(arr) {
     for(let i = arr.length - 1; i > 0; i--) {
@@ -165,10 +173,10 @@
   //ランダムボタン
   const ranBtn = document.getElementById('ranBtn');
   ranBtn.addEventListener(mytap, () => {
-    random();
+    ranBtn();
   });
 
-  function random() {
+  function ranBtn() {
     let str = '';
     const lang2 = document.getElementsByName('lang2');
     for (let i = 0; i < lang2.length; i++) {
@@ -261,40 +269,20 @@
   });
 
   function remakeResult () {
-    if (window.ontouchstart === null) {
       switch (playLabel) {
         case 'a':
-          alert('oobbbbbboo');
-          combiBtn.onclick;
-          alert('gggg');
+          combiBtn();
           break;
         case 'b':
-          alert('oobbbbbboo');
-          anaBtn.ontouch;
+          anaBtn();
           break;
         case 'c':
-          alert('最後の手段');
-          ranBtn.touch;
+          ranBtn();
           break;
         default:
           break;
-        }
-    } else {
-      switch (playLabel) {
-        case 'a':
-          combiBtn.click();
-          break;
-        case 'b':
-          anaBtn.click();
-          break;
-        case 'c':
-          ranBtn.click();
-          break;
-        default:
-          break;
-        }
       }
-    }
+   }
 
 
   //戻る

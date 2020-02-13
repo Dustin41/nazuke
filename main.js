@@ -277,13 +277,13 @@
     } else {
       switch (playLabel) {
         case 'a':
-          combiBtn.touchstart();
+          combiBtn.touchend();
           break;
         case 'b':
-          anaBtn.touchstart();
+          anaBtn.touchstend();
           break;
         case 'c':
-          ranBtn.touchstart();
+          ranBtn.touchstend();
           break;
         default:
           break;

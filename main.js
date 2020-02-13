@@ -1,8 +1,5 @@
 'use strict'
 {
-  
-  alert('miss');
-  
   //スマホならタップ、pcならクリック
   const mytap = window.ontouchstart===null?"touchstart":"click";
 
@@ -280,6 +277,7 @@
     } else {
       switch (playLabel) {
         case 'a':
+          alert('aaaa');
           combiBtn.touchstart();
           alert('miss');
           break;

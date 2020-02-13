@@ -273,7 +273,7 @@
       switch (playLabel) {
         case 'a':
           alert('oooo');
-          combiBtn.ontouchstart();
+          combiBtn.touchstart();
           alert('gggg');
           break;
         case 'b':

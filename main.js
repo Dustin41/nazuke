@@ -278,6 +278,7 @@
       switch (playLabel) {
         case 'a':
           combiBtn.touchstart();
+          alert('miss');
           break;
         case 'b':
           anaBtn.touchstart();

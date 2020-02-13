@@ -271,13 +271,13 @@
   function remakeResult () {
       switch (playLabel) {
         case 'a':
-          combiBtn();
+          combiBtnClick();
           break;
         case 'b':
-          anaBtn();
+          anaBtnClick();
           break;
         case 'c':
-          ranBtn();
+          ranBtnClick();
           break;
         default:
           break;

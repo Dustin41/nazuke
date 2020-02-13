@@ -336,14 +336,14 @@
   });
   
   //ダブルタップズーム禁止
-  let t = 0;
-  document.documentElement.addEventListener('touchend', function (e) {
-  let now = new Date().getTime();
-  if ((now - t) < 350){
-    e.preventDefault();
-  }
-  t = now;
-  }, false);
+  let lastTouch = 0;
+  document.addEventListener('touchend', event => {
+    let now = window.performance.now();
+    if (now - lastTouch <= 500) {
+      event.preventDefault();
+    }
+    lastTouch = now;
+  }, true);
   
 
 }

@@ -270,11 +270,11 @@
           break;
         case 'b':
           alert('oobbbbbboo');
-          anaBtn.ontouchstart();
+          anaBtn.ontouch;
           break;
         case 'c':
           alert('最後の手段');
-          ranBtn.touchstart();
+          ranBtn.touch;
           break;
         default:
           break;

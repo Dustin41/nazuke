@@ -1,3 +1,5 @@
+import {frontHira,backHira,frontKata,backKata,frontAlf,backAlf} from './data.js';
+
 'use strict'
 {
   //スマホならタップ、pcならクリック
@@ -9,7 +11,7 @@
 
   //*****組み合わせ********************
 
-  import {frontHira,backHira,frontKata,backKata,frontAlf,backAlf} from './data.js';
+
   
   const combiBtn = document.getElementById('combiBtn');
   combiBtn.addEventListener(mytap, () => {

@@ -264,6 +264,7 @@
     if (window.ontouchstart == null) {
       switch (playLabel) {
         case 'a':
+          alert('oooo');
           combiBtn.ontouchstart();
           alert('gggg');
           break;

@@ -288,15 +288,13 @@
     } else {
       switch (playLabel) {
         case 'a':
-          alert('aaaa');
-          combiBtn.ontouchstart();
-          alert('miss');
+          combiBtn.click();
           break;
         case 'b':
-          anaBtn.touchstart();
+          anaBtn.click();
           break;
         case 'c':
-          ranBtn.touchstart();
+          ranBtn.click();
           break;
         default:
           break;

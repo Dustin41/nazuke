@@ -63,10 +63,10 @@
   //組み合わせボタン
   const combiBtn = document.getElementById('combiBtn');
   combiBtn.addEventListener(mytap, () => {
-    combiBtn();
+    combiBtnClick();
   });
 
-  function combiBtn() {
+  function combiBtnClick() {
     const combiName = sanitize(document.querySelector('input[name="combiName"]').value);
     strCheck(combiName, areaA, "areaA", 'input[name="combiName"]');
     if (errorLabel) {
@@ -129,10 +129,10 @@
   //アナグラムボタン
   const anaBtn = document.getElementById('anaBtn');
   anaBtn.addEventListener(mytap, () => {
-    anaBtn(); 
+    anaBtnClick(); 
   });
 
-  function anaBtn() {
+  function anaBtnClick() {
     const ana = sanitize(document.querySelector('input[name="anaName"]').value);
     strCheck(ana, areaB, "areaB", 'input[name="anaName"]');
     if (errorLabel) {
@@ -173,10 +173,10 @@
   //ランダムボタン
   const ranBtn = document.getElementById('ranBtn');
   ranBtn.addEventListener(mytap, () => {
-    ranBtn();
+    ranBtnClick();
   });
 
-  function ranBtn() {
+  function ranBtnClick() {
     let str = '';
     const lang2 = document.getElementsByName('lang2');
     for (let i = 0; i < lang2.length; i++) {

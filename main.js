@@ -345,6 +345,5 @@
   t = now;
   }, false);
   
-</script>
 
 }

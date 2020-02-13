@@ -264,7 +264,7 @@
     if (window.ontouchstart == null) {
       switch (playLabel) {
         case 'a':
-          combiBtn.click();
+          combiBtn.touchstart();
           break;
         case 'b':
           anaBtn.click();

@@ -1,13 +1,6 @@
 'use strict'
 {
   
-  if (window.ontouchstart === null) {
-    alert('yes');
-  } else {
-    alert('no');
-  }
-  
-  
   //スマホならタップ、pcならクリック
   const mytap = window.ontouchstart===null?"touchstart":"click";
 

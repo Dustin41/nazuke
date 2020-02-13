@@ -256,7 +256,6 @@
   //もう一度つくる
   const remake = document.getElementById('remake');
   remake.addEventListener(mytap, () => {
-    alert('qqqq');
     remakeResult();
   });
 

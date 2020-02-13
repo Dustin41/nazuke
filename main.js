@@ -274,7 +274,8 @@
           anaBtn.ontouchstart;
           break;
         case 'c':
-          ranBtn.click();
+          alert('最後の手段');
+          ranBtn.touchstart;
           break;
         default:
           break;

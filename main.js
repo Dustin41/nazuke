@@ -2,9 +2,9 @@
 {
   
   if (window.ontouchstart === null) {
-    console.log('yes');
+    alert('yes');
   } else {
-    console.log('no');
+    alert('no');
   }
   
   

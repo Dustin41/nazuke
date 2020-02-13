@@ -44,10 +44,6 @@ header p {
   margin: 5vw 0;
 }
 
-input {
-  -webkit-appearance: none;
-}
-
 .btn {
   text-decoration: none;
   border: 1px solid #777;
@@ -59,6 +55,7 @@ input {
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
+  -webkit-appearance: none !important;
 }
 
 .btn:hover {

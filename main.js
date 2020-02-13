@@ -264,7 +264,8 @@
     if (window.ontouchstart == null) {
       switch (playLabel) {
         case 'a':
-          combiBtn.touchstart();
+          combiBtn.ontouchstart();
+          alert('gggg');
           break;
         case 'b':
           anaBtn.click();
@@ -279,7 +280,7 @@
       switch (playLabel) {
         case 'a':
           alert('aaaa');
-          combiBtn.click();
+          combiBtn.ontouchstart();
           alert('miss');
           break;
         case 'b':

@@ -260,20 +260,36 @@
   });
 
   function remakeResult () {
-    switch (playLabel) {
-      case 'a':
-        combiBtn.click();
-        break;
-      case 'b':
-        anaBtn.click();
-        break;
-      case 'c':
-        ranBtn.click();
-        break;
-      default:
-        break;
+    if (window.ontouchstart == null) {
+      switch (playLabel) {
+        case 'a':
+          combiBtn.click();
+          break;
+        case 'b':
+          anaBtn.click();
+          break;
+        case 'c':
+          ranBtn.click();
+          break;
+        default:
+          break;
+        }
+    } else {
+      switch (playLabel) {
+        case 'a':
+          combiBtn.touchstart();
+          break;
+        case 'b':
+          anaBtn.touchstart();
+          break;
+        case 'c':
+          ranBtn.touchstart();
+          break;
+        default:
+          break;
+        }
+      }
     }
-  }
 
 
   //戻る

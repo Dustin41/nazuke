@@ -261,7 +261,6 @@
   });
 
   function remakeResult () {
-    alert('lllllll');
     if (window.ontouchstart === null) {
       switch (playLabel) {
         case 'a':
@@ -271,11 +270,11 @@
           break;
         case 'b':
           alert('oobbbbbboo');
-          anaBtn.ontouchstart;
+          anaBtn.ontouchstart();
           break;
         case 'c':
           alert('最後の手段');
-          ranBtn.touchstart;
+          ranBtn.touchstart();
           break;
         default:
           break;

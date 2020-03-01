@@ -11,11 +11,12 @@ body {
 }
 
 body p {
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
 header {
-  height: 18vw;
+  margin: 0;
+  height: 100px;
   color: white;
   text-align: center;
   background-size: cover;
@@ -43,8 +44,14 @@ header p {
   text-indent: 2rem;
 }
 
+.mainArea {
+  max-width: 700px;
+  margin: 0 auto;
+
+}
+
 .discription {
-  margin: 5vw 0;
+  margin: 3vw 0;
 }
 
 .btn {
@@ -58,7 +65,7 @@ header p {
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
-  -webkit-appearance: none !important;
+  -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -83,10 +90,9 @@ header p {
 
 .bigMethod {
   background: #fff;
-  width: 90vw;
   border: 1px solid #777;
-  margin: 5vw auto;
-  padding: 8vw 5vw;
+  margin: 2vw 5vw;
+  padding: 6vw 3vw;
   box-shadow: 0 0 8px gray;
 }
 
@@ -123,6 +129,7 @@ input {
 }
 
 #modal {
+  width: 60vw;
   padding: 50px 30px;
   position: fixed;
   top: 50%;
@@ -140,9 +147,14 @@ input {
   left: 50%;
 }
 
+#resultArea > li {
+  margin-bottom: 2px;
+}
+
 #remake {
   display: inline-block;
   margin-top: 30px;
+  margin-bottom: 5px;
 }
 
 #back {
@@ -175,9 +187,11 @@ input {
 }
 
 
+
 @media screen and (min-width: 640px)  {
-  body {
-    font-size: 1.7rem;
+
+  header {
+    height: 125px;
   }
 
   header h1 {
@@ -187,16 +201,17 @@ input {
   header p {
     font-size: 1.1rem;
   }
+
+  .bigMethod {
+    padding: 4vw 2vw;
+  }
 }
 
 
 @media screen and (min-width: 1200px) {
-  body {
-    font-size: 1.8rem;
-  }
 
   header {
-    height: 216px;
+    height: 150px;
   }
 
   header h1 {
@@ -207,24 +222,6 @@ input {
     font-size: 1.3rem;
   }
 
-  .discription {
-    margin: 3vw auto;
-  }
-
-  .methods {
-    display: none;
-  }
-
-  .bigMethods {
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-
-  }
-
   .bigMethod {
-    max-width: 400px;
-    padding: 3vw 2vw;
-    margin: 0 1vw 1vw 1vw;
+    padding: 2vw 1vw;
   }
-}

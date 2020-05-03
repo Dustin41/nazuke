@@ -1,7 +1,7 @@
 # nazuke
 nazuke(ナヅケ)は、ブログ名を提案してくれるサービスです。
 
-##Description
+## Description
 ３種類の方法で、あなたのブログ名を提案してくれます。
 
 1.組み合わせ
